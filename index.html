@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scientific Calculator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="calculator">
+    <input type="text" id="display" class="display" readonly>
+    <div class="buttons">
+        <!-- Memory and Function Buttons -->
+        <button class="button special" onclick="memoryClear()">MC</button>
+<button class="button special" onclick="memoryRecall()">MR</button>
+<button class="button special" onclick="memoryAdd()">M+</button>
+<button class="button special" onclick="memorySubtract()">M-</button>
+<button class="button special" onclick="clearDisplay()">AC</button>
+
+
+ <!-- Advanced Functions and Trigonometric Functions -->
+        <button class="button fun" onclick="appendToDisplay('Math.sin(')">sin</button>
+        <button class="button fun" onclick="appendToDisplay('Math.cos(')">cos</button>
+        <button class="button fun" onclick="appendToDisplay('Math.tan(')">tan</button>
+        <button class="button fun" onclick="appendToDisplay('Math.sqrt(')">√</button>
+        <button class="button fun" onclick="appendToDisplay('Math.log10(')">log</button>
+
+        <button class="button fun" onclick="appendToDisplay('Math.sinh(')">sinh</button>
+        <button class="button fun" onclick="appendToDisplay('Math.cosh(')">cosh</button>
+        <button class="button fun" onclick="appendToDisplay('Math.tanh(')">tanh</button>
+        <button class="button fun" onclick="appendToDisplay('Math.log(')">ln</button>
+        <button class="button fun" onclick="appendToDisplay('factorial(')">n!</button>
+
+
+        <!-- Basic Operation Buttons -->
+        <button class="button" onclick="appendToDisplay('7')">7</button>
+        <button class="button" onclick="appendToDisplay('8')">8</button>
+        <button class="button" onclick="appendToDisplay('9')">9</button>
+        <button class="button operation" onclick="appendToDisplay('/')">/</button>
+        <button class="button special" onclick="backspace()">⌫</button>
+
+        <button class="button" onclick="appendToDisplay('4')">4</button>
+        <button class="button" onclick="appendToDisplay('5')">5</button>
+        <button class="button" onclick="appendToDisplay('6')">6</button>
+        <button class="button operation" onclick="appendToDisplay('*')">*</button>
+        <button class="button" onclick="appendToDisplay('**2')">x²</button>
+
+        <button class="button" onclick="appendToDisplay('1')">1</button>
+        <button class="button" onclick="appendToDisplay('2')">2</button>
+        <button class="button" onclick="appendToDisplay('3')">3</button>
+        <button class="button operation" onclick="appendToDisplay('-')">-</button>
+        <button class="button" onclick="appendToDisplay('**3')">x³</button>
+
+        <button class="button" onclick="appendToDisplay('0')">0</button>
+        <button class="button" onclick="appendToDisplay('.')">.</button>
+        <button class="button" onclick="appendToDisplay('Math.PI')">π</button>
+        <button class="button operation" onclick="appendToDisplay('+')">+</button>
+       <button class="button" onclick="appendToDisplay('**')">x^y</button>
+
+     
+
+
+       
+
+        <!-- Additional Buttons -->
+        <button class="button" onclick="appendToDisplay('(')">(</button>
+        <button class="button" onclick="appendToDisplay(')')">)</button>
+        <button class="button" onclick="appendToDisplay('/100')">%</button>
+           <button class="button operation1" onclick="calculate()">=</button>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
